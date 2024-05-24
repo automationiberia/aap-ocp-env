@@ -1,0 +1,14 @@
+- op: replace
+  path: /metadata/namespace
+  value: aap-dev
+
+- op: replace
+  path: /spec/installPlanApproval
+  value: Automatic
+
+- op: replace
+  path: /spec/channel
+  value: stable-2.4
+
+- op: remove
+  path: /spec/startingCSV

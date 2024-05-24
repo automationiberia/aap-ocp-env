@@ -1,0 +1,8 @@
+all:
+  children:
+    cluster1:
+      hosts:
+        cluster1.ocp-aap
+    cluster2:
+      hosts:
+        cluster2.ocp-aap

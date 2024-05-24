@@ -1,0 +1,10 @@
+---
+- op: replace
+  path: /metadata/namespace
+  value: aap-dev
+
+- op: replace
+  path: /spec/targetNamespaces
+  value:
+    - app-dev
+...
