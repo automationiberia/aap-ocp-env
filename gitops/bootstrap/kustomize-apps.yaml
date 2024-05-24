@@ -22,7 +22,7 @@ spec:
           prune: true
           selfHeal: true
       source:
-        repoURL: 'https://github.com/automationiberia/aap_ocp_iac.git'
+        repoURL: 'https://github.com/automationiberia/aap-ocp-env.git'
         targetRevision: main
         path: 'gitops/applications/aap-operator/overlays/{{ env }}'
       destination:
