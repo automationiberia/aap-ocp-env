@@ -16,7 +16,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path:  gitops/bootstrap
-    repoURL: 'https://github.com/automationiberia/aap_ocp_iac.git'
+    repoURL: 'https://github.com/automationiberia/aap-ocp-env.git'
     targetRevision: main
   project: default
   syncPolicy:
