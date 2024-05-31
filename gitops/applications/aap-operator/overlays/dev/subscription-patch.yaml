@@ -1,8 +1,4 @@
 - op: replace
-  path: /metadata/namespace
-  value: aap-dev
-
-- op: replace
   path: /spec/installPlanApproval
   value: Automatic
 

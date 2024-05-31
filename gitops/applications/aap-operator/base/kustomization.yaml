@@ -3,9 +3,14 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+  - namespace.yaml
   - operatorgroup.yaml
   - subscription.yaml
+  - automation-container-groups-role-binding.yaml
+  - automation-container-groups-role.yaml
+  - automation-container-groups-sa.yaml
+  - automationcontroller.yaml
+#  - automationhub.yaml
+#  - automationeda.yaml
 
-commonAnnotations:
-  kustomize.config.k8s.io/namespace: ansible-automation-platform
 ...

@@ -8,12 +8,12 @@ metadata:
   labels:
     app.kubernetes.io/component: automationhub
     app.kubernetes.io/managed-by: automationhub-operator
-    app.kubernetes.io/name: hub-testathon
+    app.kubernetes.io/name: automationhub
     app.kubernetes.io/operator-version: ''
-    app.kubernetes.io/part-of: hub-testathon
+    app.kubernetes.io/part-of: automationhub
     openshift.io/cluster-monitoring: "true"
     argocd.argoproj.io/managed-by: openshift-gitops
-  name: hub-testathon
+  name: automationhub
   namespace: ansible-automation-platform
 spec:
   gunicorn_content_workers: 2
@@ -30,7 +30,7 @@ spec:
   no_log: true
   storage_type: S3
   file_storage_size: 100Gi
-  object_storage_s3_secret: s3-secret-automationhub-testathon
+  object_storage_s3_secret: s3-secret-automationhub
   file_storage_access_mode: ReadWriteMany
   image_pull_policy: IfNotPresent
   web:

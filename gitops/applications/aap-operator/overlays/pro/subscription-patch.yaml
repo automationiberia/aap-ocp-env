@@ -1,7 +1,4 @@
-- op: replace
-  path: /metadata/namespace
-  value: aap-pro
-
+---
 - op: replace
   path: /spec/installPlanApproval
   value: Manual
@@ -13,3 +10,4 @@
 - op: replace
   path: /spec/startingCSV
   value: aap-operator.v2.4.0-0.1702352195
+...

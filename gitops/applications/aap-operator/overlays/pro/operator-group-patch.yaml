@@ -1,9 +1,5 @@
 ---
 - op: replace
-  path: /metadata/namespace
-  value: aap-pro
-
-- op: replace
   path: /spec/targetNamespaces
   value:
     - aap-pro

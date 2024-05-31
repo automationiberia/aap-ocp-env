@@ -8,12 +8,12 @@ metadata:
   labels:
     app.kubernetes.io/component: automationcontroller
     app.kubernetes.io/managed-by: automationcontroller-operator
-    app.kubernetes.io/name: controller-prd-testathon
+    app.kubernetes.io/name: automationcontroller
     app.kubernetes.io/operator-version: ''
-    app.kubernetes.io/part-of: controller-prd-testathon
+    app.kubernetes.io/part-of: automationcontroller
     openshift.io/cluster-monitoring: "true"
     argocd.argoproj.io/managed-by: openshift-gitops
-  name: controller-prd-testathon
+  name: automationcontroller
   namespace: ansible-automation-platform
 spec:
   create_preload_data: true
