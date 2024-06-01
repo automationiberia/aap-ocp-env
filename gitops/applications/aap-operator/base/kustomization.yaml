@@ -11,7 +11,7 @@ resources:
   - automation-container-groups-role.yaml
   - automation-container-groups-sa.yaml
   - automationcontroller.yaml
-#  - automationhub.yaml
-#  - automationeda.yaml
+  - automationhub.yaml
+  - automationeda.yaml
 
 ...
