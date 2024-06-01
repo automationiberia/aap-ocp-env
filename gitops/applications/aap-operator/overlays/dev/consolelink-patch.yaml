@@ -1,0 +1,9 @@
+---
+- op: replace
+  path: /spec/text
+  value: Dev Automation Controller
+
+- op: add
+  path: /spec/href
+  value: "https://dev-automationcontroller-aap-dev.apps.ocp-aap.sandbox191.opentlc.com/"
+...

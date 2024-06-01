@@ -29,4 +29,9 @@ patches:
     group: automationhub.ansible.com
     kind: AutomationHub
     name: automationhub
+- path: consolelink-patch.yaml
+  target:
+    group: console.openshift.io
+    kind: ConsoleLink
+    name: controllerlink
 ...
