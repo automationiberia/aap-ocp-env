@@ -13,5 +13,4 @@ resources:
   - automationcontroller.yaml
   - automationhub.yaml
   - automationeda.yaml
-
 ...

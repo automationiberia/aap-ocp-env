@@ -10,8 +10,15 @@ aws_secret_key: "{{ vault_aws_secret_key }}"
 aws_region: "{{ vault_aws_region }}"
 
 # AWS S3 bucket PAH data
-s3_bucket_name: "hub-bucket-{{ vault_ocp_api_host.split('.')[2] }}"
-s3_bucket_secret_pah_name: "s3-secret-automationhub"
+#s3_bucket_name: "hub-bucket-{{ vault_ocp_api_host.split('.')[2] }}"
+#s3_bucket_secret_pah_name: "s3-secret-automationhub"
+automationhub_s3_list:
+  - namespace: aap-dev
+    hub_s3_bucket_name: "hub-dev-bucket-{{ vault_ocp_api_host.split('.')[2] }}"
+    hub_s3_bucket_secret_name:  "dev-s3-secret-automationhub"
+  - namespace: aap-pro
+    hub_s3_bucket_name: "hub-pro-bucket-{{ vault_ocp_api_host.split('.')[2] }}"
+    hub_s3_bucket_secret_name: "pro-s3-secret-automationhub"
 
 # AAP data
 aap_ocp_namespace: "ansible-automation-platform"
