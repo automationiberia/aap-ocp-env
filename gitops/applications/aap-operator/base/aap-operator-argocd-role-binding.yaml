@@ -5,7 +5,7 @@ metadata:
   name: admin-rolebinding
   namespace: ansible-automation-platform
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "0"
 subjects:
 - kind: ServiceAccount
   name: openshift-gitops-argocd-application-controller

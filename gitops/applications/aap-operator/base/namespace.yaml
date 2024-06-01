@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: ansible-automation-platform
   annotations:
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: "-1"
