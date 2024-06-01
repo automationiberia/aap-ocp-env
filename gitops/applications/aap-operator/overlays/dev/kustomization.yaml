@@ -24,4 +24,9 @@ patches:
     group: operators.coreos.com
     kind: Subscription
     name: ansible-automation-platform
+- path: automatinhub-patch.yaml
+  target:
+    group: automationhub.ansible.com
+    kind: AutomationHub
+    name: automationhub
 ...

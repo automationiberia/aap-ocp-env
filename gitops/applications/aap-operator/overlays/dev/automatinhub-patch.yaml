@@ -1,0 +1,5 @@
+---
+- op: replace
+  path: /spec/object_storage_s3_secret
+  value: dev-s3-secret-automationhub
+...
