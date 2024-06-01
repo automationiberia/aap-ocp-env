@@ -5,6 +5,21 @@ metadata:
   name: aap-bootstrap-env
   namespace: openshift-gitops
 spec:
+  resourceHealthChecks:
+    - group: operators.coreos.com
+      kind: Subscription
+      check: |
+        hs = {}
+        if obj.status ~= nil then
+          if obj.status.currentCSV ~= nil and (obj.status.state == "AtLatestKnown" or obj.status.state == "UpgradeAvailable" or obj.status.state == "UpgradePending") then
+            hs.status = "Healthy"
+            hs.message = "Subscription installed"
+            return hs
+          end
+        end
+        hs.status = "Progressing"
+        hs.message = "Waiting for Subscription to complete."
+        return hs
   generators:
   - list:
       elements:
