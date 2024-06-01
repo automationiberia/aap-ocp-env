@@ -23,7 +23,6 @@ $ ansible-navigator run bootstrap.yaml -i inventory -l cluster2 -m stdout --eei
 ```
 ## Variables
 
-
 |Variable Name|Default Value|Required|Description|Example|
 |:---|:---:|:---:|:---|:---|
 |`ocp_api_key`|n/a|yes|Token used to authenticate with the Openshift API|'sha256~Po6ydC7CVs12drESQeNiUW9poUT84aFrj7zL3VQfvrS'|
@@ -35,3 +34,14 @@ $ ansible-navigator run bootstrap.yaml -i inventory -l cluster2 -m stdout --eei
 |`s3_bucket_name`|"n/a"|yes|Name of the S3 bucket that will be created and used by PAH|'hub-testathon-bucket'|
 |`s3_bucket_secret_pah_name`|"n/a"|yes|Name of the secret that will be used by PAH to access the S3 bucket |'s3-secret-automationhub'|
 |`aap_ocp_namespace`|n/a|ansible-automation-platform|Name of the namespace where the AAP will be deploy it|'ansible-automation-platform'|
+
+## Manually deploy the aap operator and instances
+```
+kustomize build overlays/dev/
+kubectl apply -k overlays/dev/
+```
+
+## Delete S3 buckets
+```
+ansible-navigator run bootstrap.yaml -i inventory -l cluster1 -m stdout --eei quay.io/automationiberia/ee-ocp-aap-iac-casc --vault-password-file .vault_password --tags s3_config -e '{aws_resources_state: absent}'
+```
