@@ -4,6 +4,7 @@ kind: Kustomization
 
 resources:
   - namespace.yaml
+  - aap-operator-argocd-role-binding.yaml
   - operatorgroup.yaml
   - subscription.yaml
   - automation-container-groups-role-binding.yaml
