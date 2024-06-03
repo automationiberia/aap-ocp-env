@@ -45,3 +45,9 @@ kubectl apply -k overlays/dev/
 ```
 ansible-navigator run bootstrap.yaml -i inventory -l cluster1 -m stdout --eei quay.io/automationiberia/ee-ocp-aap-iac-casc --vault-password-file .vault_password --tags s3_config -e '{aws_resources_state: absent}'
 ```
+
+## Create / Destroy EC2 instances
+```
+$ ansible-navigator run ec2_creation.yaml -m stdout --eei quay.io/automationiberia/ee-ocp-aap-iac-casc --vault-password-file .vault_password -e @group_vars/cluster1/vault  -vvv -e '{ec2_state: absent}'
+$ ansible-navigator run ec2_creation.yaml -m stdout --eei quay.io/automationiberia/ee-ocp-aap-iac-casc --vault-password-file .vault_password -e @group_vars/cluster1/vault  -vvv -e '{ec2_state: present}'
+```

@@ -78,8 +78,8 @@
         name: openshift-gitops
       register: gitops_namespace
       until:  gitops_namespace.resources[0] is defined and gitops_namespace.resources[0].status.phase == "Active"
-      retries: 20
-      delay: 2
+      retries: 30
+      delay: 3
 
     - name: "Create the ArgoCD instance"
       kubernetes.core.k8s:

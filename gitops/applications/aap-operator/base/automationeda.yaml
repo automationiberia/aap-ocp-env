@@ -4,6 +4,15 @@ kind: EDA
 metadata:
   name: automationeda
   namespace: ansible-automation-platform
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+  labels:
+    app.kubernetes.io/managed-by: eda-operator
+    app.kubernetes.io/name: automationeda
+    app.kubernetes.io/part-of: automationeda
+    app.kubernetes.io/operator-version: ''
+    argocd.argoproj.io/managed-by: openshift-gitops
 spec:
   route_tls_termination_mechanism: Edge
   ingress_type: Route
